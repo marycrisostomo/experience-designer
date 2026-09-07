@@ -67,19 +67,46 @@
   </div>
 </section>
 <div class="seam" style="--seam-color: var(--brick); margin: 0;"></div>
+     
 <!-- ======================================================
-     PROCESS STRIP
+     PROCESS STRIP — Playline style
 ====================================================== -->
-<section class="process" id="process" style="padding-top: 1rem;">
+<section class="process" id="process">
   <p class="section-label">How I design an experience</p>
-  <ol class="process__steps">
-    <li><span class="num">01</span>Observe &amp; spark</li>
-    <li><span class="num">02</span>Sketch &amp; map</li>
-    <li><span class="num">03</span>Prototype in the room</li>
-    <li><span class="num">04</span>Test with real guests</li>
-    <li><span class="num">05</span>Refine</li>
-    <li><span class="num">06</span>Build</li>
-  </ol>
+
+  <div class="playline-wrap">
+    <svg class="playline-svg" viewBox="0 0 1200 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- winding blue path -->
+      <path class="playline-path"
+        d="M 20 200 
+           C 120 200, 120 60, 220 60 
+           C 320 60, 320 200, 420 200 
+           C 520 200, 520 60, 620 60 
+           C 720 60, 720 200, 820 200 
+           C 920 200, 920 60, 1020 60 
+           C 1080 60, 1120 100, 1180 100"
+        fill="none" stroke="#3B5BDB" stroke-width="46" stroke-linecap="round"/>
+      <!-- dashed centerline like road markings -->
+      <path class="playline-dash"
+        d="M 20 200 
+           C 120 200, 120 60, 220 60 
+           C 320 60, 320 200, 420 200 
+           C 520 200, 520 60, 620 60 
+           C 720 60, 720 200, 820 200 
+           C 920 200, 920 60, 1020 60 
+           C 1080 60, 1120 100, 1180 100"
+        fill="none" stroke="#F4E9D8" stroke-width="3" stroke-dasharray="10 12" stroke-linecap="round"/>
+    </svg>
+
+    <ol class="playline-steps">
+      <li style="--x: 20; --y: 200;"><span class="num">01</span><span class="label">Observe &amp; spark</span></li>
+      <li style="--x: 220; --y: 60;"><span class="num">02</span><span class="label">Sketch &amp; map</span></li>
+      <li style="--x: 420; --y: 200;"><span class="num">03</span><span class="label">Prototype in the room</span></li>
+      <li style="--x: 620; --y: 60;"><span class="num">04</span><span class="label">Test with real guests</span></li>
+      <li style="--x: 820; --y: 200;"><span class="num">05</span><span class="label">Refine</span></li>
+      <li style="--x: 1020; --y: 60;"><span class="num">06</span><span class="label">Build</span></li>
+    </ol>
+  </div>
 </section>
 
 <!-- ======================================================
