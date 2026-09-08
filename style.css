@@ -214,6 +214,71 @@ a{ color: inherit; }
 }
 .process__steps li:hover .num{ transform: rotate(-8deg) scale(1.08); }
 
+.playline-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.playline-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.playline-path {
+  filter: drop-shadow(0 6px 0 rgba(0,0,0,0.08));
+}
+
+.playline-steps {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.playline-steps li {
+  position: absolute;
+  left: calc(var(--x) / 1200 * 100%);
+  top: calc(var(--y) / 260 * 100%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.playline-steps .num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #F4E9D8;
+  border: 4px solid #3B5BDB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #1E2A5E;
+  font-size: 0.95rem;
+}
+
+.playline-steps .label {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1E2A5E;
+  background: #FBF6EC;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .playline-wrap { display: none; } /* fall back to a simple list on mobile */
+}
+
 /* ==========================================================
    WORK / CASE STUDIES
 ========================================================== */
