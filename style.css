@@ -214,21 +214,41 @@ a{ color: inherit; }
 }
 .process__steps li:hover .num{ transform: rotate(-8deg) scale(1.08); }
 
+.process {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.section-label {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .playline-wrap {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 2rem auto 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .playline-svg {
   width: 100%;
   height: auto;
+  max-height: 40vh;
   display: block;
 }
 
 .playline-path {
+  stroke: #F5C518; /* yellow road */
   filter: drop-shadow(0 6px 0 rgba(0,0,0,0.08));
+}
+
+.playline-dash {
+  stroke: #FBF6EC; /* keep dashes light for contrast against yellow */
 }
 
 .playline-steps {
@@ -251,32 +271,40 @@ a{ color: inherit; }
 }
 
 .playline-steps .num {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #F4E9D8;
-  border: 4px solid #3B5BDB;
+  background: #FBF6EC;
+  border: 4px solid #F5C518; /* yellow circle */
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  color: #1E2A5E;
-  font-size: 0.95rem;
+  color: #4A3B00; /* dark warm tone for contrast on yellow border */
+  font-size: 0.9rem;
 }
 
 .playline-steps .label {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: #1E2A5E;
+  color: #4A3B00;
   background: #FBF6EC;
-  padding: 0.15rem 0.5rem;
+  padding: 0.1rem 0.4rem;
   border-radius: 6px;
   white-space: nowrap;
 }
 
 @media (max-width: 800px) {
-  .playline-wrap { display: none; } /* fall back to a simple list on mobile */
+  .process {
+    min-height: auto;
+  }
+  .playline-wrap {
+    display: none; /* fallback to simple list below */
+  }
+  .process__steps--mobile {
+    display: block;
+  }
 }
 
 /* ==========================================================
